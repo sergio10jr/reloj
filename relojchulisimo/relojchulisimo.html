@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reloj</title>
+		<meta charset ="UTF-8">
+		<style type="text/css">
+					
+			#contenedor_reloj{
+					background-color: cyen;
+					margin: 2rem;
+					padding: 2rem;
+					border: blue;
+					text-align: center;
+				}
+			#contenedor_titulo{
+					background-color:violet;
+					color:tomatoe;
+					width: auto;
+					height:auto;
+					text-align: center;
+				}
+			#contenedor_hora{
+					text-align: center;
+					width: auto;
+					height:auto;
+					background-color:blue;
+					color:yellow;
+					border:solid black;
+					margin: 35px;
+					padding:44px;
+					text-align:center;
+					font-size:95px;	
+				}
+				
+			p{
+					color:fuchsia;
+					text-align: center;
+					font-size:20px;
+			}
+			body{
+				
+				background-color: blue;
+			}
+		</style>
+		
+		<script>
+			function añadirCero(i){
+				if(i<10){
+					i="0" + i; 
+					}
+				return i; 
+				}
+			
+		
+			function f_hora(){
+				var hoy = new Date();
+				var h = añadirCero (hoy.getHours());
+				var m = añadirCero(hoy.getMinutes());
+				var s = añadirCero(hoy.getSeconds());
+				document.getElementById('contenedor_hora').innerHTML = h+":"+m+":"+s;
+				setInterval ( f_hora , 1000);
+			}
+		</script>
+
+	</head>
+
+	<body onload=f_hora() >
+			
+		<p> Sergio y Rodrigo </p>
+		<div id="contenedor_reloj">	
+			<h1 id="contenedor_titulo"> Reloj chulo</h1>
+			<button id="contenedor_hora" onclick="f_hora()">actualizar la hora</button>
+		</div>
+	</body>
+	
+</html>
