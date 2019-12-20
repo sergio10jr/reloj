@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PAR E IMPAR</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript"> 
+			function vaciar(){
+				document.getElementById("n1").value="";
+			}
+			function parImpar(){
+				var num=document.getElementById("n1");
+				if((num.value%2)===0){
+					num.value="par";
+					}else{
+						num.value="impar";
+					}
+				}
+		</script>
+		<script src="p5.js"></script>
+		<script src="p5.sound.min.js"> </script>
+		<script src="sketch.js"></script>
+	</head>
+	<body>
+		numero:<input type ="text" id="n1" onclick="vaciar()" >
+		<button onclick="parImpar()">ParImpar </button>
+	</body>
+</html>
